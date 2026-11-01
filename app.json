@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Tapo IR HDMI Switcher",
+    "slug": "tapo-hdmi-controller-health-check-react",
+    "version": "1.4.1",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#060D0B"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lnu.tapoServerHealthCheck",
+      "buildNumber": "6",
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "需要使用區域網路連線以探測本機/區網 Mac Flask 伺服器狀態與健康指標。",
+        "NSBonjourServices": [
+          "_http._tcp",
+          "_bonjour._tcp"
+        ],
+        "ITSAppUsesNonExemptEncryption": false,
+        "UIRequiresFullScreen": false,
+        "UISupportedInterfaceOrientations": [
+          "UIInterfaceOrientationPortrait",
+          "UIInterfaceOrientationLandscapeLeft",
+          "UIInterfaceOrientationLandscapeRight"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#060D0B"
+      },
+      "package": "com.lnu.tapo_server_health_check",
+      "versionCode": 6,
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "ACCESS_WIFI_STATE"
+      ]
+    },
+    "plugins": [
+      "./plugins/withAndroidTv.js",
+      "expo-asset",
+      "expo-font",
+      "react-native-platform-components"
+    ]
+  }
+}
